@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+.cabecalho {
+    background-color: rgb(236, 174, 19);
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 20px;
+}
+
+.curriculo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.perfilSection, .qualSection
+{
+    background-color: rgb(236, 232, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: solid 2px rgb(28, 14, 2);
+    width: 100%;
+    padding: 0px 18px 18px 18px;
+}
+
+.Perfil, .Qual {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: beige;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content:right;
+    margin-bottom: 20px;
+    width: 100%;
+    align-self: center;
+}
+
+.perfilPartDois, .qualPartDois {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.imgPerfil {
+    border: solid 1px rgb(210, 203, 184);
+    border-radius: 1000px;
+    width: 15%;
+}
+
+
+.perfilEscrito {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.tituloPerfil {
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    justify-content: left;
+}
+
+.spanUm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+.nomeEsc {
+    font-weight:600;
+}
+
+.nome {
+    text-align: center;
+    padding: 5px;
+}
+
+.tituloSskills {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(0, 0, 0);
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 20px;
+}
+
+.softScab, .nomePerfil, .nomeQual {
+    font-size: larger;
+    color: beige;
+    font-weight: bolder;
+    text-align: right ;
+}

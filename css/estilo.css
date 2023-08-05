@@ -33,7 +33,7 @@ body {
     font-weight: bold;
 }
 
-.perfilSection, .qualSection
+.perfilSection, .qualSection, .forSection
 {
     background-color: rgb(236, 232, 221);
     display: flex;
@@ -44,20 +44,20 @@ body {
     padding: 0px 18px 18px 18px;
 }
 
-.subPerfilUm, .subQualUm {
+.subPerfilUm, .subQualUm, .subForUm {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: black;
     color: beige;
     display: flex;
     flex-direction: row;
     padding: 20px;
-    justify-content:right;
+    justify-content: right;
     margin-bottom: 20px;
     width: 100%;
     align-self: center;
 }
 
-.subPerfilDois, .subQualDois, .subSoftDois, .subHardDois {
+.subPerfilDois, .subQualDois, .subSoftDois, .subHardDois, .subForDois {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -71,7 +71,7 @@ body {
 }
 
 
-.perfilDesc, .qualDesc, .softDesc, .hardDesc {
+.perfilDesc, .qualDesc, .softDesc, .hardDesc, .forDesc {
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -88,6 +88,7 @@ body {
 .spanUm {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
+    list-style: none;
 }
 
 .nomeEsc {
@@ -99,7 +100,7 @@ body {
     padding: 5px;
 }
 
-.nomeSoft, .nomePerfil, .nomeQual, .nomeHard {
+.nomeSoft, .nomePerfil, .nomeQual, .nomeFor, .nomeHard {
     font-size: larger;
     color: beige;
     font-weight: bolder;

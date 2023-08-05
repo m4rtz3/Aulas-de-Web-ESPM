@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 70%;
 }
 
 .cabecalho {
@@ -44,7 +44,7 @@ body {
     padding: 0px 18px 18px 18px;
 }
 
-.Perfil, .Qual {
+.subPerfilUm, .subQualUm {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: black;
     color: beige;
@@ -57,29 +57,31 @@ body {
     align-self: center;
 }
 
-.perfilPartDois, .qualPartDois {
+.subPerfilDois, .subQualDois, .subSoftDois, .subHardDois {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-bottom: 10px;
 }
 
 .imgPerfil {
     border: solid 1px rgb(210, 203, 184);
     border-radius: 1000px;
-    width: 15%;
+    width: 20%;
 }
 
 
-.perfilEscrito {
+.perfilDesc, .qualDesc, .softDesc, .hardDesc {
     flex-direction: column;
     display: flex;
     justify-content: center;
     width: fit-content;
 }
 
-.tituloPerfil {
+.Desc {
     background-color: rgba(0, 0, 0, 0);
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     justify-content: left;
 }
 
@@ -93,23 +95,57 @@ body {
 }
 
 .nome {
-    text-align: center;
+    text-align:justify;
     padding: 5px;
 }
 
-.tituloSskills {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(0, 0, 0);
-    flex-direction: row-reverse;
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    padding: 20px;
-}
-
-.softScab, .nomePerfil, .nomeQual {
+.nomeSoft, .nomePerfil, .nomeQual, .nomeHard {
     font-size: larger;
     color: beige;
     font-weight: bolder;
     text-align: right ;
+}
+
+.skillsGeralSection {
+    background-color: rgb(236, 232, 221);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+}
+
+.sSkillsSection
+{
+    background-color: rgb(236, 232, 221);
+    border: solid 2px rgb(28, 14, 2);
+    width: 100%;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+}
+
+.hSkillsSection
+{
+    background-color: rgb(236, 232, 221);
+    border: solid 2px rgb(28, 14, 2);
+    border-left: 0px;
+    width: 100%;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+}
+
+.subSoftUm, .subHardUm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: beige;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0px 5px 0px;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    align-self: center;
 }

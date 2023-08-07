@@ -1,17 +1,19 @@
 <script>
 
     /* variavel global */
-    let x, y
+    let x, y, resultado
 
     x = parseInt(prompt("Digite um valor: "));
     y = parseInt(prompt("Digite outro valor: "));
 
-    somar();
+    valor = somar(x, y); //argumentos --> valor que será enviado para a função trabalhar
+    console.log(valor);
 
-    function somar() {
+    function somar(a, b) { //parametros --> valores recebidos
         /* variavel local */
-        let valor = x + y;
-        console.log("Valor = " + valor);
+        let valor = a + b;
+        //console.log("Valor = " + valor);
+        return valor;
     }
 
 </script>

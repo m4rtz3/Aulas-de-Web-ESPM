@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 02</title>
+</head>
+
+<body>
+
+    <script>
+
+        let x = parseInt(prompt("Digite um número"));
+
+        if (x <= 0) {
+            alert("valor inválido");
+        } else {
+
+            let divisores = []
+            let cont = 1;
+            let i = 0;
+
+            Equacao(cont, x);
+
+            function Equacao(cont, x) {
+
+                for (cont == 1; cont <= x;) {
+                    if (x % cont == 0) {
+                        divisores[i] = cont;
+                        cont++
+                    } else {
+                        cont++
+                    }
+                }
+
+                document.write(divisores);
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

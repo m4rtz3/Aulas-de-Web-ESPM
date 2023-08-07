@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 03</title>
+</head>
+<body>
+
+    <script>
+
+        let valorUm = parseInt(prompt("Digite o primeiro valor"))
+        let valorDois = parseInt(prompt("Digite o segundo valor"))
+        let valorTres = parseInt(prompt("Digite o terceiro valor"))
+
+        valorMaior = analise(valorUm, valorDois, valorTres);
+        document.write(valorMaior)
+
+        function analise(valorUm, valorDois, valorTres) {
+            let valorMaior = 0;
+
+            if ((valorUm > valorDois) && (valorUm > valorTres)) {
+                valorMaior = valorUm
+            } else if ((valorDois > valorUm) && (valorDois > valorTres)) {
+                valorMaior = valorDois
+            } else {
+                valorMaior = valorTres
+            }
+
+            return valorMaior;
+        }
+
+
+    </script>
+    
+</body>
+</html>

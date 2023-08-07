@@ -4,6 +4,10 @@ btn.addEventListener("click", analise);
 
 function analise() {
     let numero = parseInt(document.getElementById("numeroAnalise").value);
+
+    let numeroAnalise = document.getElementById("numerovendo");
+    numeroAnalise.innerText = numero;
+    
     let analiseConcl = document.getElementById("analiseConc");
 
     if (numero === 1) {

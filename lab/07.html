@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 05</title>
+</head>
+
+<body>
+
+    <script>
+
+        let aleatorios = new Array(10)
+
+        let aleatoriosDois = [preencher(aleatorios)]
+        console.log(aleatoriosDois)
+
+        function preencher() {
+
+            for (let i = 0; i < aleatorios.length; i++) {
+                aleatorios[i] = parseInt(Math.random() * 10)
+            }
+            return aleatorios;
+
+        }
+
+        let aleatoriosTres = [crescentar(aleatoriosDois)]
+        console.log(aleatoriosTres)
+
+        function crescentar() {
+
+            let valorMaior = 0;
+
+            for (let j = 0; j < aleatorios.length; j++) {
+                for (let i = 0; i < aleatorios.length;) {
+                    if (aleatorios[i] > aleatorios[i + 1]) {
+                        valorMaior = aleatorios[i]
+                        aleatorios[i] = aleatorios[i + 1]
+                        aleatorios[i + 1] = valorMaior
+                        i++
+                    } else {
+                        i++
+                    }
+                }
+            }
+            return aleatorios;
+        }
+
+        amostrar(aleatoriosTres);
+
+        function amostrar() {
+            console.log("LISTA: " + aleatorios)
+
+            for (let i = 0; i <= aleatorios.length; i++) {
+                console.log(aleatorios[i])
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

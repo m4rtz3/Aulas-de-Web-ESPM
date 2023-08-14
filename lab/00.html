@@ -3,7 +3,7 @@
     /* variavel global */
     let x, y, resultado
 
-    x = parseInt(prompt("Digite um valor: "));
+    x = parseInt(prompt("Digite um valor: ")); //global
     y = parseInt(prompt("Digite outro valor: "));
 
     valor = somar(x, y); //argumentos --> valor que será enviado para a função trabalhar
@@ -11,7 +11,8 @@
 
     function somar(a, b) { //parametros --> valores recebidos
         /* variavel local */
-        let valor = a + b;
+        let c = a + b; //local
+        valor = c;
         //console.log("Valor = " + valor);
         return valor;
     }

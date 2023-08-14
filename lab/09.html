@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 04</title>
+</head>
+
+<body>
+
+    <script>
+
+        let aleatorios = new Array(10)
+
+        let listaAleatorios = preencher(aleatorios)
+        console.log(listaAleatorios)
+
+        function preencher() {
+
+            for (let i = 0; i < aleatorios.length; i++) {
+                aleatorios[i] = parseInt(Math.random() * 15)
+            }
+            return aleatorios;
+        }
+
+        let maiorNumero = analiseValores(listaAleatorios);
+
+        document.write("<p> Lista: " + listaAleatorios + "</p>")
+        document.write("<p> Maior Número: " + maiorNumero + "</p>")
+        console.log(maiorNumero)
+
+        function analiseValores(listaAleatorios) {
+
+            let valorMaior = 0;
+
+            for (let j = 0; j < listaAleatorios.length; j++) {
+                for (let i = 0; i < listaAleatorios.length;) {
+                    if (listaAleatorios[i] < listaAleatorios[i + 1]) {
+                        valorMaior = listaAleatorios[i]
+                        listaAleatorios[i] = listaAleatorios[i + 1]
+                        listaAleatorios[i + 1] = valorMaior
+                        i++
+                    } else {
+                        i++
+                    }
+                }
+            }
+
+            return listaAleatorios[0];
+        }
+
+        tabuada(maiorNumero);
+
+        function tabuada(valor) {
+            for (let i = 0; i <= 10; i++) {
+                document.write("<p>" + valor + " x " + i + " = " + (valor * i))
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

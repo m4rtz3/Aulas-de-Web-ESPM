@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 04</title>
+</head>
+
+<body>
+
+    <script>
+
+        let a = parseInt(prompt("DÊ O VALOR DE A"))
+        let b = parseInt(prompt("DÊ O VALOR DE B"))
+        let c = parseInt(prompt("DÊ O VALOR DE C"))
+
+        console.log(a + " " + b + " " + c)
+        let valorDelta = delta(a, b, c)
+
+        if (valorDelta < 0) {
+            alert("erro")
+        } else {
+            let valorDosX = [segundoGrau(a, b, c, valorDelta)];
+            console.log(valorDosX);
+        }
+
+        function delta(a,b,c) {
+            //delta
+            let delta = Math.pow(b, 2) - 4 * a * c
+            return delta;
+        }
+
+        function segundoGrau(a, b, c, delta) {
+
+            //raizes
+            let xNegativo = Number((-b - Math.sqrt(delta)) / 2 * a);
+            console.log(xNegativo)
+
+            let xPositivo = Number((-b + Math.sqrt(delta)) / 2 * a);
+            console.log(xPositivo)
+
+            let doisX = [xNegativo, xPositivo];
+            return doisX;
+        }
+
+    </script>
+
+</body>
+
+</html>

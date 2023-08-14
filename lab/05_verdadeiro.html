@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 03</title>
+</head>
+
+<body>
+
+    <script>
+
+        let numeroValores = parseInt(prompt("Insira quantos valores serão"))
+        let valores = []
+
+        for (let i = 0; i < numeroValores; i++) {
+            valores.push(Number(prompt("Qual o valor " + (i + 1) + "?")))
+        }
+
+        //console.log(valores);
+
+        let valorMaiorDeTodos = analiseValores(valores);
+
+        function analiseValores(valores) {
+
+            let valorMaior = 0;
+
+            for (let j = 0; j < valores.length; j++) {
+                for (let i = 0; i < valores.length;) {
+                    if (valores[i] < valores[i + 1]) {
+                        valorMaior = valores[i]
+                        valores[i] = valores[i + 1]
+                        valores[i + 1] = valorMaior
+                        i++
+                    } else {
+                        i++
+                    }
+                }
+            }
+
+            return valores[0];
+        }
+
+        console.log(valorMaiorDeTodos);
+
+    </script>
+
+</body>
+
+</html>

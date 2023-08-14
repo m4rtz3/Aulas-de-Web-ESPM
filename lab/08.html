@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 04</title>
+</head>
+
+<body>
+
+    <script>
+
+        let aleatorios = new Array(10)
+
+        let listaAleatorios = preencher(aleatorios)
+
+        function preencher(aleatorios) {
+
+            for (let i = 0; i < aleatorios.length; i++) {
+                aleatorios[i] = parseInt(Math.random() * 10)
+            }
+            return aleatorios;
+        }
+
+        imprimir(listaAleatorios);
+
+        function imprimir() {
+            console.log(listaAleatorios)
+        }
+
+        listaAleatorios = inversao(listaAleatorios)
+        imprimir(listaAleatorios);
+
+        function inversao(listaAleatorios) {
+
+            let listaNova = new Array(10)
+
+            for (let j = 0; j < listaAleatorios.length; j++) {
+                listaNova[j] = listaAleatorios[listaAleatorios.length - 1 - j]
+            }
+
+            return listaNova;
+        }
+
+    </script>
+
+</body>
+
+</html>

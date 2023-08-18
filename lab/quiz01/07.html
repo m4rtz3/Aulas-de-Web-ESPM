@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+
+        let r = Number(prompt("Numero"))
+
+        let cx = 0
+        let cy = 0
+        let w = 600
+        let h = 400
+
+        function configurar(w, h) {
+            cx = w/2
+            cy = h/2
+        }
+
+        // escopo é a função no geral ( no bloco do codigo)
+        // parametro só os parenteses
+
+        function calcular2(x1, y1, x2, y2) {
+            let dx = x1 - x2
+            let dy = y1 - y2
+            let d = (dx * dx) + (dy * dy)
+            let aux = Math.sqrt(d)
+            return aux
+        }
+
+        function calcular(r) {
+            let a = Math.PI * r * r
+            return a
+        }
+
+        configurar(w, h)
+        let a = calcular(r)
+        let d = calcular2(x,y,cx,cy)
+
+        console.log(a + " " + d)
+
+    </script>
+
+</body>
+
+</html>

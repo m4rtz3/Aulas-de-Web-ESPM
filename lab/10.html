@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 04</title>
+</head>
+
+<body>
+
+    <script>
+
+        let x = parseFloat(prompt("Digite um número"))
+
+        let y = calculo(x)
+        console.log(y)
+
+        function calculo(x) {
+            let equacaoUm = (5 * x) + 3
+
+            let equacaoDois = Math.sqrt(Math.sqrt(x) - 16)
+
+            let equacaoFinal = equacaoUm/equacaoDois
+
+            return equacaoFinal;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imagens/nuvens.jpg);
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 55px;
+    text-align: center;
+    color: black;
+    margin: 30px;
+    padding: 20px;
+    background-color: white;
+    width: 85%;
+}
+
+.bem_vindo {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+    padding: 10px;
+    color: white;
+    width: 85%;
+}

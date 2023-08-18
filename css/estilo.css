@@ -16,9 +16,10 @@ body {
     width: 70%;
     align-self: center;
     align-content: center;
+    padding-bottom: 10px;
 }
 
-.cabecalho, .subPerfilUm, .subQualUm, .subForUm {
+.cabecalho, .subPerfilUm, .subQualUm, .subForUm, .subExpUm, .subtempoUmUm {
     background-color: black;
     align-self: center;
     width: 100%;
@@ -37,15 +38,24 @@ body {
     padding-left: 0px;
 }
 
-.subPerfilUm, .subQualUm, .subForUm, .subSoftUm, .subHardUm {
+.subPerfilUm, .subQualUm, .subForUm, .subSoftUm, .subHardUm, .subExpUm {
     background-color: gray;
 }
 
-.perfilSection, .qualSection, .forSection {
+.subtempoUmUm {
+    background-color: rgb(0, 0, 0);
+}
+
+.perfilSection, .qualSection, .forSection, .expProfiSection, .tempoSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+}
+
+.tempoSection {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .sSkillsSection, .hSkillsSection {
@@ -55,10 +65,14 @@ body {
     width: 50%;
 }
 
-.curriculo, .nomePerfil, .nomeQual, .nomeFor {
+.curriculo, .nomePerfil, .nomeQual, .nomeFor, .nomeExpPr, .nomeTempoUm {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     text-align: right;
+}
+
+.nomeTempoUm {
+    text-align: left;
 }
 
 .nomeSoft, .nomeHard {
@@ -67,12 +81,12 @@ body {
     text-align: center;
 }
 
-.nomePerfil, .nomeQual, .nomeFor, .nomeSoft, .nomeHard {
+.nomePerfil, .nomeQual, .nomeFor, .nomeSoft, .nomeHard, .nomeExpPr {
     font-size: larger;
     font-weight: bolder;
 }
 
-.subPerfilDois, .subQualDois, .subForDois, .subSoftDois, .subHardDois {
+.subPerfilDois, .subQualDois, .subForDois, .subSoftDois, .subHardDois, .subtempoUmDois {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,9 +111,13 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.nome {
+.nome, .nomeExp {
     text-align: left;
     color: black;
+}
+
+.nomeExp {
+    margin-top: 15px;
 }
 
 .spanUm {

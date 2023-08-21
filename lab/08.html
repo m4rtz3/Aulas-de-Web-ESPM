@@ -34,13 +34,17 @@
 
         function inversao(listaAleatorios) {
 
-            let listaNova = new Array(10)
+            let aux; //auxiliar
+            let j = listaAleatorios.length - 1 //j é igual à posição 9
 
-            for (let j = 0; j < listaAleatorios.length; j++) {
-                listaNova[j] = listaAleatorios[listaAleatorios.length - 1 - j]
+            for (let i = 0; i < listaAleatorios.length/2; i++) {
+                aux = listaAleatorios[i] //auxiliar pega primeiro valor
+                listaAleatorios[i] = listaAleatorios[j] //primeiro valor se torna o último valor
+                listaAleatorios[j] = aux //último valor é igual ao primeiro (graças a auxiliar)
+                j-- //j diminui
             }
 
-            return listaNova;
+            return listaAleatorios;
         }
 
     </script>

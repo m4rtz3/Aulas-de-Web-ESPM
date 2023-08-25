@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 65px;
+}
+
+#campo {
+    align-self: left;
+    margin: 1.5px;
+    margin-top: 15px;
+    margin-bottom: 5.5px;
+    margin-right: 3.5px;
+    font-weight: 700;
+}
+
+#campoNome, #campoSenha, #campoData, #submit {
+    align-self: left;
+    padding: 3.5px;
+    max-width: 20%;
+}
+
+#campoData {
+    max-width: 10%;
+}
+
+#submit {
+    margin-top: 15px;
+    max-width: 10%;
+}

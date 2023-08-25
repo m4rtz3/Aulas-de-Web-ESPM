@@ -1,40 +1,91 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-image: url(../imagens/nuvens.jpg);
-    width: 100%;
 }
 
 #container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 85%;
+    align-content: center;
+    align-self: center;
+    padding: 50px;
+    width: 90%;
 }
 
-.header {
+.websiteNov {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 55px;
     text-align: center;
     color: black;
-    margin: 20px auto;
-    padding: 20px;
     background-color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 40px;
+    border-radius: 50px;
+    margin: 0 auto;
 }
 
-.bem_vindo {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: right;
-    padding: 10px;
+.bemVindo {
+    font-size: 22px;
     color: white;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px rgb(27, 75, 163);
+    padding: 5px;
+    width: 100%;
+    text-align: right;
+}
+
+.texto {
+    margin: 0 auto;
+    font-weight: bolder;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.406);
+}
+
+.verm {
+    color: red;
+}
+
+.amare {
+    color: rgb(255, 242, 0);
+}
+
+.verd {
+    color: green;
+}
+
+.azul {
+    color: blue;
+}
+
+.gifUm {
+    float: none;
+    align-self: center;
+    width: 35%;
+    margin: 20px;
+}
+
+.textoDois {
+    text-align: center;
+    background-image: url(../imagens/milky-way-2695569_1280.jpg);
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hide {
+    color: rgba(0, 136, 255, 0);
+    text-decoration: none;
+}
+
+.hide:hover {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-weight: 1000;
+    font-size: 45px;
+    text-shadow: 3px 3px 3px white;
 }

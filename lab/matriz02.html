@@ -1,0 +1,37 @@
+<script>
+
+    let m = new Array(4)
+
+    for (let i = 0; i < m.length; i++) {
+        m[i] = new Array(4)
+
+        for (let j = 0; j < m.length; j++) {
+            m[i][j] = Math.trunc(Math.random() * 21);
+        }
+    }
+
+    console.table(m)
+
+    //diagonal principal 
+    let somaDP = 0
+
+    for (let j = 0; j < m.length; j++) {
+        somaDP = somaDP + m[j][j]
+    }
+
+    console.log(somaDP)
+
+    //diagonal principal 
+    let somaDS = 0
+
+    for (let j = 0; j < m.length; j++) {
+        for (let k = (m.length - 1); k >= 0; k--) {
+            if (k + j == (m.length - 1)) {
+                somaDS = somaDS + m[j][k]
+            }
+        }
+    }
+
+    console.log(somaDS)
+
+</script>

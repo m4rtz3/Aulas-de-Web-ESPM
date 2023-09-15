@@ -1,0 +1,43 @@
+<script>
+
+    let m = new Array(10)
+
+    for (let i = 0; i < m.length; i++) {
+        m[i] = new Array(10)
+
+        for (let j = 0; j < m.length; j++) {
+            m[i][j] = Math.trunc(Math.random() * 1001);
+        }
+    }
+
+    console.table(m)
+
+    let aux = 0 //maior
+    let loc = new Array (2); //localização da maior
+
+    for (let i = 0; i < m.length; i++) {
+        for (let j = 0; j < m.length;) {
+            if (m[i][j] > aux) {
+                aux = m[i][j]
+                loc[0] = i;
+                loc[1] = j;
+                j++
+            } else {
+                aux = aux
+                j++
+            }
+        }
+    }
+
+    //for (let i = 0; i < m.length; i++) {
+        //for (let j = 0; j < m.length;) {
+            //  if (m[i][j] == aux) {
+            // console.log(i + " " + j)
+            //}
+        //}
+    //}
+
+    console.log(aux)
+    console.log(loc)
+
+</script>

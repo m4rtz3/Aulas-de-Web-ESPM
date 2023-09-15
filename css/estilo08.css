@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#organizacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.banner {
+    display: flex;
+    background-size: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    background-image: url(../imagens/aula/ErKiiWAW8AEVYQI.jpg_large);
+    background-repeat: no-repeat;
+    margin: auto 0;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.titulo {
+    margin: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.texto {
+    width: 70%;
+    margin: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.contato {
+    width: 10%;
+    text-align: center;
+    background-color: rgba(255, 235, 205, 0);
+    border: solid 1px white;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: medium;
+    margin: 10px;
+}
+
+.contato:hover {
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.banner {
+    display: flex;
+    background-size: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    background-color: rgb(152, 78, 63);
+    margin: auto 0;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(55, 0, 0);
+}
+
+.itens {
+    padding: 20px;
+    display: flex;
+    background-size: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    background-color: rgb(237, 226, 223);
+    margin: auto 0;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.colunaOpcao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: center;
+    align-items: center;
+}
+
+.opcao {
+    width: 15%;
+}
+
+.icone {
+    width: 10%;
+}

@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+#campo {
+    align-self: center;
+    margin: 1.5px;
+    margin-top: 15px;
+    margin-bottom: 5.5px;
+    font-weight: 700;
+}
+
+#campoTemp, #campoTpTemp {
+    align-self: center;
+    padding: 3.5px;
+    max-width: 20%;
+}
+
+button {
+    margin-top: 15px;
+    max-width: 10%;
+    align-self: center;
+}
+
+#conversao {
+    align-self: center;
+    margin: 1.5px;
+    margin-top: 15px;
+    margin-bottom: 5.5px;
+    margin-right: 3.5px;
+    text-align: center;
+}

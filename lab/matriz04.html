@@ -1,0 +1,68 @@
+<script>
+
+    let nomes = new Array(5)
+    let vendas = new Array(5) // 5 linhas
+
+    let aux = 0
+    let aux2 = Infinity
+    let soma
+    let linhaNome = 0
+    let linhOutNome = 0
+
+    for (let i = 0; i < nomes.length; i++) {
+        nomes[i] = String(prompt("Qual o nome do funcionário " + (i + 1) + "?"));
+
+        vendas[i] = new Array(6)
+
+        for (j = 0; j < vendas[i].length; j++) {
+            vendas[i][j] = Math.trunc(Math.random() * 1001);
+        }
+    }
+
+    console.table(nomes)
+    console.table(vendas)
+    console.log(" ")
+
+    let totalVendasPcada = 0;
+
+    for (let i = 0; i < nomes.length; i++) {
+        soma = 0
+        for (j = 0; j < vendas[i].length; j++) {
+            soma = soma + vendas[i][j]
+        }
+        console.log(nomes[i] + " vendeu o total de " + soma)
+
+        if (soma > aux) {
+            aux = soma
+            linhaNome = i
+        }
+
+        if (soma < aux2) {
+            aux = soma
+            linhOutNome = i
+        }
+    }
+
+    console.log(" ")
+
+    //maior venda
+    console.log("Vendedor com a maior venda: " + nomes[linhaNome])
+
+    console.log(" ")
+
+    //menor venda
+
+    console.log("Vendedor com a menor venda: " + nomes[linhOutNome])
+
+    console.log(" ")
+
+    for (let i = 0; i < 6; i++) {
+        soma = 0
+        for (let j = 0; j < vendas[i].length; j++) {
+            soma = soma + vendas[i][j]
+        }
+        console.log("No mês " + i + " foi vendido " + soma)
+    }
+
+
+</script>

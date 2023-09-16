@@ -14,28 +14,37 @@
     <h1 class="titulo">CALCULE O SEU VALOR EXCENDENTE</h1>
 
     <div id="organizacao">
-        <div id="tabela">
 
-            <h2 class="titulo2">Preencha os dados:</h2>
+        <div id="divisoriaUm">
+            <div id="tabela">
 
-            <!-- cpf do cliente -->
-            <label for="clienteCPF" id="campoN">CPF: </label>
-            <input type="number" name="clienteCPF" id="campoCPF">
-            <p></p>
+                <h2 class="titulo2">Preencha os dados:</h2>
 
-            <!-- nome do cliente -->
-            <label for="clienteNome" id="campoN">Cliente: </label>
-            <input type="text" name="clienteNome" id="campoNome">
-            <p></p>
+                <!-- cpf do cliente -->
+                <label for="clienteCPF" id="campoN">CPF: </label>
+                <input type="number" name="clienteCPF" id="campoCPF">
+                <p></p>
+
+                <!-- nome do cliente -->
+                <label for="clienteNome" id="campoN">Cliente: </label>
+                <input type="text" name="clienteNome" id="campoNome">
+                <p></p>
 
 
-            <!-- megabytes -->
-            <label for="clienteMB" id="campoN">Consumo extra de Megabytes (MB)<br>(agosto/2023): </label>
-            <input type="number" name="clienteMB" id="campoMB">
+                <!-- megabytes -->
+                <label for="clienteMB" id="campoN">Consumo extra de Megabytes (MB) (agosto/2023): </label>
+                <input type="number" name="clienteMB" id="campoMB">
+
+            </div>
+
+            <div id="alertasDois">
+
+            </div>
 
         </div>
 
-        <div class="divisoria">
+        <div id="divisoriaDois">
+
             <div id="botoes">
 
                 <button id="botao_armazenar">Armazenar</button>
@@ -49,19 +58,13 @@
 
             </div>
 
+
+            <table id="matrizOfic" border="5px">
+
+
+            </table>
+
         </div>
-
-    </div>
-
-    <div class="divisoriaDois">
-        <div id="alertasDois">
-
-        </div>
-
-        <table id="matrizOfic" border="5px">
-
-
-        </table>
     </div>
 
 

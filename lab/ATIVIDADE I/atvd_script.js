@@ -38,8 +38,7 @@ function armazeneNomes() {
 
     if (campoDoNome.trim() === "") {
 
-        document.getElementById("alertas").style.border = "solid 2px rgb(91, 83, 11)";
-        document.getElementById("alertas").style.backgroundColor = "rgb(215, 215, 193)";
+        document.getElementById("alertas").classList.add("alertas-estilizado");
 
         //CAMPO
         let campoAlerta = '<p>Insira um nome válido!</p>';
@@ -54,8 +53,7 @@ function armazeneNomes() {
 
     if (campoDoCPF.length !== 11 || isNaN(campoDoCPF)) {
 
-        document.getElementById("alertas").style.border = "solid 2px rgb(91, 83, 11)";
-        document.getElementById("alertas").style.backgroundColor = "rgb(215, 215, 193)";
+        document.getElementById("alertas").classList.add("alertas-estilizado");
 
         //CAMPO
         let campoAlerta = '<p>Insira um CPF válido!</p>';
@@ -68,8 +66,7 @@ function armazeneNomes() {
 
     } else if (cpfsClientes.includes(campoDoCPF)) {
 
-        document.getElementById("alertas").style.border = "solid 2px rgb(91, 83, 11)";
-        document.getElementById("alertas").style.backgroundColor = "rgb(215, 215, 193)";
+        document.getElementById("alertas").classList.add("alertas-estilizado");
 
         //CAMPO
         let campoAlerta = '<p>Já há esse CPF cadastrado!</p>';
@@ -85,8 +82,7 @@ function armazeneNomes() {
 
     if (isNaN(campoDoMB)) {
 
-        document.getElementById("alertas").style.border = "solid 2px rgb(91, 83, 11)";
-        document.getElementById("alertas").style.backgroundColor = "rgb(215, 215, 193)";
+        document.getElementById("alertas").classList.add("alertas-estilizado");
 
         //CAMPO
         let campoAlerta = '<p>Valor Inválido!</p>';
@@ -102,6 +98,7 @@ function armazeneNomes() {
     mbsClientes.push(campoDoMB);
 
     imprimirValores(mbsClientes);
+    pegarValorPacote();
     visibilidade();
 
     atualizarTabela();
@@ -125,8 +122,7 @@ botaoPcli.addEventListener("click", procurarCliente);
 
 function procurarCliente() {
 
-    document.getElementById("alertas").style.border = "solid 2px rgb(91, 83, 11)";
-    document.getElementById("alertas").style.backgroundColor = "rgb(215, 215, 193)";
+    document.getElementById("alertas").classList.add("alertas-estilizado");
 
     //CAMPO
     let campoAlerta = '<label for="alertinha" id="campo">Procure o cliente pelo CPF dele: </label>';
@@ -168,8 +164,7 @@ botaoAlt.addEventListener("click", alterarDados);
 
 function alterarDados() {
 
-    document.getElementById("alertas").style.border = "solid 2px rgb(91, 83, 11)";
-    document.getElementById("alertas").style.backgroundColor = "rgb(215, 215, 193)";
+    document.getElementById("alertas").classList.add("alertas-estilizado");
 
     //CAMPO
     let campoAlerta = '<label for="alertinha" id="campo">Qual dos campos você deseja alterar? [nome/mb]: </label>';
@@ -265,8 +260,7 @@ function analiseNomes2(nomeAnterior, pesquisaCPF) {
                         nomeNovo = document.getElementById("campinho").value.trim().toUpperCase();
                         nomesClientes[indiceNome] = nomeNovo;
                         campo.innerHTML = "";
-                        document.getElementById("alertas").style.border = "none";
-                        document.getElementById("alertas").style.backgroundColor = "none";
+                        document.getElementById("alertas").classList.remove("alertas-estilizado");
 
                         visibilidade();
                         atualizarTabela();
@@ -354,8 +348,7 @@ function analiseMB2(MBAnterior, pesquisaCPF) {
                         MBNovo = document.getElementById("campinho").value.trim().toUpperCase();
                         mbsClientes[indiceMB] = MBNovo;
                         campo.innerHTML = "";
-                        document.getElementById("alertas").style.border = "none";
-                        document.getElementById("alertas").style.backgroundColor = "none";
+                        document.getElementById("alertas").classList.remove("alertas-estilizado");
 
                         visibilidade();
                         atualizarTabela();
@@ -381,8 +374,7 @@ let botaoRmr = document.getElementById("botao_remover");
 botaoRmr.addEventListener("click", removerDados);
 
 function removerDados() {
-    document.getElementById("alertas").style.border = "solid 2px rgb(91, 83, 11)";
-    document.getElementById("alertas").style.backgroundColor = "rgb(215, 215, 193)";
+    document.getElementById("alertas").classList.add("alertas-estilizado");
 
     //CAMPO
     let campoAlerta = '<label for="alertinha" id="campo">Qual o nome do cliente que você deseja remover os dados?</label>';
@@ -423,8 +415,7 @@ function removerDados() {
                         valoresPacote.splice(indice, 1);
 
                         campo.innerHTML = ""
-                        document.getElementById("alertas").style.border = "none";
-                        document.getElementById("alertas").style.backgroundColor = "none";
+                        document.getElementById("alertas").classList.remove("alertas-estilizado");
 
                         visibilidade();
                         atualizarTabela();

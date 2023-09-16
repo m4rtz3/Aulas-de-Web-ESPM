@@ -11,7 +11,102 @@ body {
     align-content: center;
     align-items: center;
     background-color: rgb(243, 243, 231);
-    width: 100%;
+    max-width: 100%;
+}
+
+#organizacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: start;
+    max-width: 80%;
+    margin: 0.75%;
+}
+
+#divisoriaUm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+#tabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(215, 215, 193);
+    border-radius: 10px;
+    margin: 2%;
+    padding: 3.5%;
+    max-width: 70%;
+}
+
+#alertasDois {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    max-width: 70%;
+    margin: 2%;
+}
+
+#divisoriaDois {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+#botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+}
+
+button {
+    max-width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    border: solid 2px rgb(86, 65, 7);
+    background-color: rgb(243, 236, 218);
+    box-shadow: 4px 4px rgba(105, 99, 32, 0.301);
+    color: rgb(86, 65, 7);
+    border-radius: 5px;
+    margin: 2%;
+    padding: 2.5%;
+}
+
+#alertas {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5%;
+    padding: 2.5%;
+}
+
+.alertas-estilizado {
+    border: solid 2px rgb(91, 83, 11);
+    background-color: rgb(215, 215, 193);
+}
+
+#matrizOfic {
+    max-width: 85%;
+    margin: 2%;
+    visibility: hidden;
+    border: solid 5px rgb(91, 83, 11);
+    background-color: rgb(255, 255, 233);
 }
 
 .titulo {
@@ -35,34 +130,6 @@ body {
     color: rgb(91, 83, 11);
 }
 
-#organizacao {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 10px;
-    align-items: start;
-    width: 80%;
-}
-
-#tabela {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 25px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: rgb(215, 215, 193);
-    width: 55%;
-}
-
-#matrizOfic {
-    visibility: hidden;
-    margin: 30px;
-    width: 60%;
-    border: solid 5px rgb(91, 83, 11);
-    background-color: rgb(255, 255, 233);
-}
-
 #campo,
 #campoN {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -80,48 +147,7 @@ body {
 #campinhoPacote {
     align-self: center;
     padding: 3.5px;
-    max-width: 40%;
-}
-
-.divisoria {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-}
-
-.divisoriaDois {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 10px;
-    align-items: start;
-    width: 80%;
-}
-
-#botoes {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 15px;
-    padding: 10px;
-    max-width: 80%;
-}
-
-button {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    border-radius: 5px;
-    border: solid 2px rgb(86, 65, 7);
-    background-color: rgb(243, 236, 218);
-    color: rgb(86, 65, 7);
-    margin: 10px;
-    font-size: larger;
-    font-weight: bolder;
-    padding: 10px;
-    max-width: 30%;
-    box-shadow: 4px 4px rgba(105, 99, 32, 0.301);
+    max-width: 50%;
 }
 
 #botao_armazenar,
@@ -144,41 +170,17 @@ button {
 #check4,
 #check5,
 #valorCheck {
-    font-size: medium;
     text-align: center;
-    border: solid 2px rgb(125, 48, 0);
-    background-color: rgb(234, 224, 216);
-    color: rgb(125, 48, 0);
-    max-width: 45%;
-    padding: 10px;
-    margin-top: 25px;
-}
-
-#valorCheck {
     align-self: center;
-    align-content: center;
-}
-
-#alertas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
     align-items: center;
-    border-radius: 5px;
-    padding: 15px;
-    width: 55%;
-    background-color: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#alertasDois {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 5px;
-    padding: 15px;
-    width: 55%;
+    align-content: center;
+    font-size: medium;
+    border: solid 2px rgb(93, 93, 19);
+    background-color: rgb(250, 250, 230);
+    color: rgb(93, 93, 19);
+    margin-top: 5%;
+    padding: 4.5%;
+    max-width: 65%;
 }
 
 td {

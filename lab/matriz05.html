@@ -6,22 +6,35 @@
         m[i] = new Array(5);
 
         for (let j = 0; j < m.length; j++) {
-            m[i][j] = Math.trunc(Math.random() * 1001);
+            m[i][j] = Math.trunc(Math.random() * 11);
         }
         i++
     }
 
     console.table(m);
 
-    let aux = new Array(m.length)
+    //pegar secundarios
+    /* let numerosDSS = []
 
     for (let j = 0; j < m.length; j++) {
         for (let k = (m.length - 1); k >= 0; k--) {
             if (k + j == (m.length - 1)) {
-                aux[0] = m[j][k]
+                numerosDSS.push(m[j][k]);
             }
         }
     }
 
-    console.table(aux)
+    for (let j = 0; j < m.length; j++) {
+        m[j][j] = numerosDSS[j]
+    } */
+
+    let aux;
+    for(let i = 0; i < m.length; i++) {
+        aux = m[i][i]
+        m[i][i] = m[i][m.length - 1 - i]
+        m[i][m.length - 1] = aux
+    }
+
+    console.table(m)
+
 </script>

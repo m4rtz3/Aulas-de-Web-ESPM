@@ -1,0 +1,48 @@
+<script>
+
+    let lin_a = parseInt(prompt("Digite o numero de linhas da matriz a"))
+    let col_a = parseInt(prompt("Digite o numero de colunas da matriz a"))
+
+    const lin_b = col_a
+    let col_b = parseInt(prompt("Digite o numero de colunas da matriz b"))
+
+    const lin_c = lin_a
+    const col_c = col_b
+
+    let soma = 0;
+
+    //declaracao de variavel
+    let a = new Array(lin_a)
+    let b = new Array(lin_b)
+    let c = new Array(lin_c)
+
+    preencher(a, lin_a, col_a)
+    console.table(a)
+    preencher(b, lin_b, col_b)
+    console.table(b)
+
+
+    for (let i = 0; i < lin_a; i++) {
+        soma = 0
+        c[i] = new Array (col_b)
+        for (let j = 0; j < col_b; j++) {
+            for (let k = 0; k < col_a; k++) {
+                soma += a[i][k] * b[k][j]
+            }
+            c[i][j] = soma
+        }
+    }
+
+    console.table(c)
+
+    //funcao pra preencher matriz
+    function preencher(m, lin, col) {
+        for (let i = 0; i < lin; i++) {
+            m[i] = new Array(col)
+            for (let j = 0; j < col; j++) {
+                m[i][j] = parseInt(Math.random() * 4)
+            }
+        }
+    }
+
+</script>

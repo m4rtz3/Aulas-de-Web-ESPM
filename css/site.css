@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(237, 239, 241);
+    max-width: 100%;
+}
+
+.limitador {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.banner {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(../imagens/celular.png);
+    background-position: right top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bannerTexto {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tituloBanner {
+    color: rgb(38, 38, 114);
+    font-weight: bold;
+    max-width: 250px;
+}
+
+.fino {
+    font-weight: lighter;
+}
+
+.textoBanner {
+    margin: 4.5%;
+    margin-left: 0;
+    color: rgb(66, 66, 66);
+}
+
+#botaoBanner {
+    padding: 2%;
+    background-color: rgb(95, 95, 207);
+    border: none;
+    border-radius: 15px;
+}
+
+#botaoBanner a {
+    color: white;
+}

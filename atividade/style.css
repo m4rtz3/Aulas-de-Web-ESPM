@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.limitador {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.barra {
+    text-align: left;
+    max-width: 100rem;
+    margin: 0px auto 0px 0px;
+    padding: 0.5rem;
+    background-color: rgb(217, 224, 224);
+    align-items: center;
+}
+
+.barra > p {
+    font-size: 0.7rem;
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(21, 118, 78);
+    padding: 0px 10px;
+    margin-top: 1rem;
+}
+
+.imagemBarra {
+    max-width: 2.5rem;
+}
+
+.secaoUm {
+    background-color: rgba(98, 178, 40, 0);
+}
+
+.containerUm, .secaoDois {
+    padding: 5.6rem 2rem;
+    max-width: 100rem;
+    margin: 0px auto;
+}
+
+.textoUm {
+    padding: .5rem;
+    color: rgb(10, 10, 81);
+}
+
+.textoUm > h6, .textoUm > h1, .textoUm > p {
+    margin-bottom: 2rem;
+    max-width: 30rem;
+}
+
+.textoUm > button {
+    width: 25%;
+    padding: 0.5rem;
+    font-size: small;
+    border-radius: 0.4rem;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(87, 144, 204);
+    border: none;
+}
+
+.imagemUm {
+    max-width: 20rem;
+}
+
+.secaoDois {
+    background-color: rgb(225, 227, 223);
+    max-width: 100rem;
+    margin: 0px auto;
+    color: rgb(10, 10, 81);
+}
+
+.parteUm, .parteDois {
+    padding: 4rem 3rem;
+}
+
+.parteDois {
+    padding-top: 0rem;
+}
+
+.parteUm h2 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parteDois {  
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagemDois {
+    max-width: 3rem;
+    display: block;
+}
+
+.carta h1 {
+    text-align: left;
+    font-size: larger;
+    padding: 1rem;
+    padding-left: 0;
+}
+
+.carta p {
+    margin-bottom: 1rem;
+    font-size: small;
+    text-align: justify;
+}
+
+.carta .button a {
+    border: none;
+    background-color: none;
+    font-size: small;
+    font-weight: bold;
+    color: rgb(139, 85, 215);
+}
+
+.secaoTres {
+    background-color: rgba(165, 42, 42, 0);
+    padding: 3.2rem 1rem;
+    margin: 0;
+}
+
+.secaoTres > h1 {
+    color: rgb(10, 10, 81);
+    text-align: left;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagemTres {
+    max-width: 25rem;
+    margin-top: 4rem;
+}
+
+.secaoQuatro {
+    background-color: #282742;
+    color: white;
+    padding: 2.4rem 2rem;
+}
+
+.paragrafos {
+    max-width: 60%;
+    padding-top: 2rem;
+}
+
+.paragrafos div {
+    padding: 0;
+    padding-left: 2.4rem;
+}
+
+.paragrafos h1 {
+    font-size:large;
+    padding-bottom: 1rem;
+}
+
+.tituloQuatro {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.paragrafos p {
+    color: #9797b1;
+    font-size: medium;
+    padding-bottom: .5rem;
+}
+
+.grafico > img {
+    max-width: 80%;
+    padding: .5rem 0rem;
+}
+
+.secaoCinco {
+    color: rgb(10, 10, 81);
+    padding: 4rem 3rem;
+}
+
+.secaoCinco > h1 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1.5rem 0rem;
+}
+
+.controle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textin {
+    padding: 1.5rem 0rem;
+}
+
+.textin > h2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:550;
+    font-size:x-large;
+    padding-bottom: .5rem;
+}

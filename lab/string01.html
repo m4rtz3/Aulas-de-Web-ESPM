@@ -1,0 +1,22 @@
+<script>
+
+    let palavra = prompt("Escreva uma palavra")
+    palavra= palavra.toLowerCase();
+    let letras = true
+
+    let j = palavra.length - 1
+    for (let i = 0; i < palavra.length / 2; i++) {
+        if(palavra.charAt(i) != palavra.charAt(j)) {
+            letras = false
+            break
+        }
+        j--
+    }
+
+    if (letras == true) {
+        console.log("É um palindromo")
+    } else {
+        console.log("Não é um palindromo")
+    }
+
+</script>

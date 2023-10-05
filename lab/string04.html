@@ -1,0 +1,17 @@
+<script>
+
+    let dna = prompt("Digite o dna")
+    dna = dna.toUpperCase();
+
+    for (let i = 0; i < dna.length; i++) {
+        if (dna.charAt(i) == "A") {
+            dna = dna.replace(dna.charAt(i), "T")
+        }
+        if (dna.charAt(i) == "T") {
+            dna = dna.replace(dna.charAt(i), "A")
+        }
+    }
+
+    alert("complementar: " + dna)
+
+</script>

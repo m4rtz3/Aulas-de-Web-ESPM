@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução</title>
+</head>
+<body>
+    
+    <button type="button" onclick="listaPessoas()">
+        Listar Pessoas
+    </button>
+
+    <script type="text/javascript">
+        
+        async function listaPessoas() {
+            let response = await fetch("https://academico.espm.br/testeapi/listar");
+
+            let lista = await response.json();
+
+            console.log("Pessoas recebidas: " + lista);
+
+            for (let i = 0; i < lista.length; i++) {
+                console.log();
+                console.log();
+                console.log();
+            }
+        }
+
+    </script>
+
+</body>
+</html>

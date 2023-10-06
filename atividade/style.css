@@ -71,7 +71,8 @@ img {
 }
 
 .imagemUm {
-    max-width: 20rem;
+    max-width: 80%;
+    margin: 1rem;
 }
 
 .secaoDois {
@@ -150,14 +151,14 @@ img {
     padding: 2.4rem 2rem;
 }
 
-.paragrafos {
-    max-width: 60%;
-    padding-top: 2rem;
-}
-
 .paragrafos div {
     padding: 0;
-    padding-left: 2.4rem;
+    padding: 0rem 2.4rem;
+}
+
+.paragrafos {
+    max-width: 100%;
+    padding-top: 2rem;
 }
 
 .paragrafos h1 {

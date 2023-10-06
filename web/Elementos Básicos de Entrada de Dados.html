@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Elementos Básicos de Entrada de Dados</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="inputTextoSimples">Texto Simples</label>
+					<input type="text" id="inputTextoSimples" class="form-control" />
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="inputTextoNumerico">Texto Númerico</label>
+					<input type="number" id="inputTextoNumerico" class="form-control" />
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="inputTextoData">Texto Data</label>
+					<input type="date" id="inputTextoData" class="form-control" />
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="inputTextoSenha">Texto Senha</label>
+					<input type="password" id="inputTextoSenha" class="form-control" />
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="selectOpcoes">Menu de Opções</label>
+					<select id="selectOpcoes" class="form-control">
+						<option value="">Selecione...</option>
+						<option value="123">Opção A</option>
+						<option value="456">Opção B</option>
+						<option value="789">Opção C</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="inputCheck">
+						<input type="checkbox" id="inputCheck" />
+						Caixa de Seleção
+					</label>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<button type="button" onclick="validarCampos()" class="btn btn-primary">Validar Campos</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+
+		function validarCampos() {
+			// Obtenção e validação básica de campos de texto simples
+			let campo = document.getElementById("inputTextoSimples");
+			let valor = campo.value;
+
+			if (!valor) {
+				console.log("Texto Simples vazio!");
+				return;
+			} else {
+				console.log("Texto Simples: " + valor);
+			}
+
+			// Obtenção e validação básica de campos de texto númericos
+			campo = document.getElementById("inputTextoNumerico");
+			// Repare que o que importa é o valor numérico, não a string! :)
+			valor = parseInt(campo.value);
+
+			if (isNaN(valor)) {
+				console.log("Texto Numérico vazio!");
+				return;
+			} else {
+				console.log("Texto Numérico: " + valor);
+			}
+
+			// Obtenção e validação básica de campos de texto com data
+			campo = document.getElementById("inputTextoData");
+			valor = campo.value;
+
+			if (!valor) {
+				console.log("Texto Data vazio!");
+				return;
+			} else {
+				console.log("Texto Data: " + valor);
+			}
+
+			// Obtenção e validação básica de campos de texto de senha
+			campo = document.getElementById("inputTextoSenha");
+			valor = campo.value;
+
+			if (!valor) {
+				console.log("Texto Senha vazio!");
+				return;
+			} else {
+				console.log("Texto Senha: " + valor);
+			}
+
+			// Obtenção e validação básica de campos menu de opções (listas)
+			campo = document.getElementById("selectOpcoes");
+			// Como sabemos que os valores das opções são sempre números inteiros,
+			// vamos utilizar o mesmo processo de validação de campos de texto numéricos.
+			// Mas, se soubéssemos que os valores não são numéricos, bastaria utilizar
+			// o mesmo processo de validação de uma caixa de texto simples! :)
+			valor = parseInt(campo.value);
+
+			if (isNaN(valor)) {
+				console.log("Menu de Opções vazio!");
+				return;
+			} else {
+				console.log("Menu de Opções: " + valor);
+			}
+
+			// Obtenção e validação básica de caixas de seleção
+			campo = document.getElementById("inputCheck");
+			valor = campo.checked;
+			console.log("Caixa de Seleção: " + valor);
+		}
+
+	</script>
+
+</body>
+</html>

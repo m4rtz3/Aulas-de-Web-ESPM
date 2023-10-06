@@ -6,7 +6,22 @@ botaoC.addEventListener("click", Cript);
 function Cript() {
 
     //pega dos campos a senha descriptografa e o numero para deslocamento
-    let senhaAntes = (String(document.getElementById("campoSenha").value).toLowerCase());
+    let senhaAntes = document.getElementById("campoSenha").value;
+
+    senhaAntes = senhaAntes.replace(/[áãàâä]/g, 'a')
+        .replace(/[êéèë]/g, 'e')
+        .replace(/[íìîï]/g, 'i')
+        .replace(/[ôóòöõ]/g, 'o')
+        .replace(/[ûùúü]/g, 'u')
+        .replace(/[ç]/g, 'c')
+        
+        .replace(/[ÁÃÀÂÄ]/g, 'A')
+        .replace(/[ÊÉÈË]/g, 'E')
+        .replace(/[ÍÌÎÏ]/g, 'I')
+        .replace(/[ÔÓÒÖÕ]/g, 'O')
+        .replace(/[ÛÙÚÜ]/g, 'U')
+        .replace(/[Ç]/g, 'C');
+
     let numero = parseInt(document.getElementById("campoNmr").value);
 
     //uma string para manipular o alfabeto
@@ -34,6 +49,16 @@ function Cript() {
             for (let j = 0; j < palavra.length; j++) {
                 //variavel atual que conterá o primeiro caracter
                 let atual = palavra.charAt(j);
+
+                //checagem pra letra maiúscula e minúscula
+                if (atual === atual.toUpperCase()) {
+                    let atualMenor = atual.toLowerCase();
+                    if (alfabeto.includes(atualMenor)) {
+                        alfabeto = alfabeto.toUpperCase();
+                    }
+                } else {
+                    alfabeto = alfabeto.toLowerCase();
+                }
 
                 //se no alfabeto tiver a letra da variavel atual...
                 if (alfabeto.includes(atual)) {
@@ -82,7 +107,7 @@ botaoD.addEventListener("click", Descript);
 //o mesmo processo mas ao contrario
 
 function Descript() {
-    let senhaAntes = (String(document.getElementById("campoSenhaCrip").value).toLowerCase());
+    let senhaAntes = document.getElementById("campoSenhaCrip").value;
     let numero = parseInt(document.getElementById("campoNmrD").value);
 
     let alfabeto = "abcdefghijklmnopqrstuvwxyz";
@@ -94,22 +119,32 @@ function Descript() {
 
         for (let i = 0; i < palavras.length; i++) {
             let palavra = palavras[i];
-            let palavraCriptografada = "";
+            let palavraDescriptografada = "";
 
             for (let j = 0; j < palavra.length; j++) {
                 let atual = palavra.charAt(j);
 
+                //checagem pra letra maiúscula e minúscula
+                if (atual == atual.toUpperCase()) {
+                    let atualMenor = atual.toLowerCase();
+                    if (alfabeto.includes(atualMenor)) {
+                        alfabeto = alfabeto.toUpperCase();
+                    }
+                } else {
+                    alfabeto = alfabeto.toLowerCase();
+                }
+
                 if (alfabeto.includes(atual)) {
                     let indiceAt = alfabeto.indexOf(atual);
-                    let novoInd = (indiceAt - numero) % alfabeto.length;
+                    let novoInd = (indiceAt - numero + alfabeto.length) % alfabeto.length;
                     let novaAlf = alfabeto.charAt(novoInd);
-                    palavraCriptografada += novaAlf;
+                    palavraDescriptografada += novaAlf;
                 } else {
-                    palavraCriptografada += atual;
+                    palavraDescriptografada += atual;
                 }
             }
 
-            descriptografada += palavraCriptografada + " ";
+            descriptografada += palavraDescriptografada + " ";
         }
         let campoSenhaNova = document.getElementById("senhaFinalD");
         campoSenhaNova.innerHTML = "<p>" + descriptografada.trim() + "</p>";

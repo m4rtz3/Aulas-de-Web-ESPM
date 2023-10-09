@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+</head>
+<body>
+    <h1>
+        Produção de toalhas
+    </h1>
+
+    <label for="comprimento">Comprimento:</label>
+    <input type="text" name="comprimento" id="comToalha">
+    <p></p>
+
+    <label for="largura">Largura:</label>
+    <input type="text" name="largura" id="larToalha">
+    <p></p>
+
+    <label for="desenho">Caracter:</label>
+    <input type="text" name="desenho" id="carToalha">
+    <p></p>
+
+    <button onclick="Molde()">
+        Faça seu molde
+    </button>
+
+    <p></p>
+
+    <div id="molde">
+
+    </div>
+    <p></p>
+
+    
+    <button onclick="imprimir()">
+        Imprima Molde
+    </button>
+
+    <script src="./js/tecidos.js"></script>
+</body>
+</html>

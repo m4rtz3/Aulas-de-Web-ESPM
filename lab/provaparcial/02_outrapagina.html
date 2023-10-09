@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outra página</title>
+</head>
+
+<body>
+    <h1>
+        REVENDA ESPM - PROMOÇÃO (RESULTADO)
+    </h1>
+
+    <div id="resultado">
+
+    </div>
+
+    <p onclick="simule()">
+        Simule Outro Veículo
+    </p>
+
+    <script>
+        const modelo = localStorage.getItem("modelo");
+        const tipo = localStorage.getItem("tipo");
+        const entrada = localStorage.getItem("entrada");
+        const outraMtd = localStorage.getItem("outraMtd");
+
+        let campo = document.getElementById("resultado");
+
+        campo.innerHTML += "<p>" + modelo + " - " + tipo + "</p>";
+        campo.innerHTML += "<p>Entrada: R$" + entrada + "</p>";
+        campo.innerHTML += "<p>+ 10x de R$" + outraMtd + "</p>";
+
+        function simule() {
+            localStorage.clear();
+            window.location.href = "02.html";
+        }
+
+    </script>
+
+</body>
+
+</html>

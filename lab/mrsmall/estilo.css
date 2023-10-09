@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(104, 39, 130);
+}
+
+.caixa1 {
+    box-shadow: 10px 8px 20px 0px rgb(0, 0, 0);
+    background-color: rgb(251, 236, 253);
+    width: 500px;
+    text-align: center;
+    margin: 100px auto 0px;
+    padding: 20px;
+    border-radius: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    text-align: left;
+    margin: 0px 0px 20px;
+    color: rgb(104, 39, 130);
+}
+
+.direita {
+    text-align: right;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(104, 39, 130);
+    padding: 8px;
+    border-radius: 10px;
+    border: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pergunta {
+    text-align: left;
+    margin: 0px 0px 0px 50px;
+    /* color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: rgb(104, 39, 130); */
+
+}
+
+#senhaFinalC, #senhaFinalD {
+    visibility: hidden;
+}
+
+input {
+    border-radius: 20px;
+    padding: 4px 5px;
+    margin: 0px 5px 10px;
+    border: 0;
+}
+
+.line {
+    width: 8 0%;
+    height: 1px;
+    background-color: rgb(230, 194, 244);
+    margin: 20px 0;
+}
+
+.rato {
+    background-image: url(./imagem/ratinho.png);
+    max-width: 100%;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.feio {
+    background-image: url(./imagem/feio.png);
+    max-width: 100%;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

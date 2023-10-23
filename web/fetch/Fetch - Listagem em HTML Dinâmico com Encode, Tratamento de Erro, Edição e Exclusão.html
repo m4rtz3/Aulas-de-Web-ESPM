@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fetch - Listagem em HTML Dinâmico com Encode, Tratamento de Erro, Edição e Exclusão</title>
+</head>
+<body>
+
+	<a href="/Fetch - Criação Simples.html">Criar Nova Pessoa</a>
+
+	<button type="button" onclick="listarPessoas()">
+		Listar Pessoas
+	</button>
+
+	<div id="divListagem"></div>
+
+	<script type="text/javascript">
+		let regExpAmp = /\&/g, regExpLt = /</g, regExpGt = />/g;
+
+		function encode(x) {
+			return (x ? x.replace(regExpAmp, "&amp;").replace(regExpLt, "&lt;").replace(regExpGt, "&gt;") : "");
+		}
+
+		async function listarPessoas() {
+
+			try {
+
+				let response = await fetch("https://academico.espm.br/testeapi/listar");
+
+				if (!response.ok) {
+					alert("Ocorreu um erro ao listar as pessoas :(");
+					return;
+				}
+
+				let lista = await response.json();
+
+				let html = `<h1>Pessoas cadastradas: ${lista.length}</h1>`;
+
+				for (let i = 0; i < lista.length; i++) {
+					html += `
+						<hr />
+						<h2>
+							<i>(${lista[i].id})</i> ${encode(lista[i].nome)}
+						</h2>
+						<p>
+							E-mail: ${encode(lista[i].email)}
+						</p>
+						<p>
+							<a href="/Fetch - Edição com Base na Query String.html?id=${lista[i].id}">Editar Pessoa</a>
+
+							<button type="button" onclick="excluirPessoa(${lista[i].id})">Excluir Pessoa</button>
+						</p>
+					`;
+				}
+
+				let divListagem = document.getElementById("divListagem");
+
+				divListagem.innerHTML = html;
+
+			} catch (ex) {
+				alert("Ocorreu um erro de rede ao listar as pessoas: " + ex.message)
+			}
+
+		}
+
+		async function excluirPessoa(id) {
+
+			if (!confirm(`Deseja mesmo excluir a pessoa ${id}?`)) {
+				return;
+			}
+
+			try {
+
+				let response = await fetch("https://academico.espm.br/testeapi/excluir/" + id);
+
+				if (!response.ok) {
+					alert("Ocorreu um erro ao excluir a pessoa, ou a pessoa não foi encontrada :(");
+					return;
+				}
+
+				alert("Pessoa excluída com sucesso!");
+
+				await listarPessoas();
+
+			} catch (ex) {
+				alert("Ocorreu um erro de rede ao excluir a pessoa: " + ex.message)
+			}
+
+		}
+
+		listarPessoas();
+
+	</script>
+
+</body>
+</html>

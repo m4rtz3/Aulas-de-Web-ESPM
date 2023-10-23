@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fetch - Edição com Base na Query String</title>
+</head>
+<body>
+
+	<input type="hidden" id="inputId" />
+
+	<div>
+		<label for="inputNome">Nome</label>
+		<input type="text" id="inputNome" />
+	</div>
+
+	<div>
+		<label for="inputEmail">E-mail</label>
+		<input type="email" id="inputEmail" />
+	</div>
+
+	<button type="button" onclick="salvarPessoa()">
+		Salvar Pessoa
+	</button>
+
+	<script type="text/javascript">
+
+		async function carregarPessoa() {
+
+			let inputId = document.getElementById("inputId");
+			let inputNome = document.getElementById("inputNome");
+			let inputEmail = document.getElementById("inputEmail");
+
+			let id = parseInt(inputId.value);
+
+			if (!id) {
+				alert("Id inválido!");
+				return;
+			}
+
+			try {
+
+				let response = await fetch("https://academico.espm.br/testeapi/obter/" + id);
+
+				if (!response.ok) {
+					alert("Ocorreu um erro ao carregar a pessoa, ou a pessoa não foi encontrada :(");
+					return;
+				}
+
+				let pessoa = await response.json();
+
+				inputNome.value = pessoa.nome;
+				inputEmail.value = pessoa.email;
+
+			} catch (ex) {
+				alert("Ocorreu um erro de rede ao salvar a pessoa: " + ex.message)
+			}
+
+		}
+
+		async function salvarPessoa() {
+
+			let inputId = document.getElementById("inputId");
+			let inputNome = document.getElementById("inputNome");
+			let inputEmail = document.getElementById("inputEmail");
+
+			let id = parseInt(inputId.value);
+			let nome = inputNome.value;
+			let email = inputEmail.value;
+
+			if (!id) {
+				alert("Id inválido!");
+				return;
+			}
+
+			if (!nome) {
+				alert("Nome inválido!");
+				return;
+			}
+
+			if (!email) {
+				alert("E-mail inválido!");
+				return;
+			}
+
+			let pessoa = {
+				id: id,
+				nome: nome,
+				email: email
+			};
+
+			try {
+
+				let response = await fetch("https://academico.espm.br/testeapi/alterar", {
+					method: "POST",
+					body: JSON.stringify(pessoa),
+					headers: {
+						"content-type": "application/json"
+					}
+				});
+
+				if (!response.ok) {
+					alert("Ocorreu um erro ao salvar a pessoa, ou a pessoa não foi encontrada :(");
+					return;
+				}
+
+				alert("Pessoa salva com sucesso!");
+
+			} catch (ex) {
+				alert("Ocorreu um erro de rede ao salvar a pessoa: " + ex.message)
+			}
+
+		}
+
+		function carregarIdDaQueryString() {
+
+			let inputId = document.getElementById("inputId");
+
+			let pares = location.search.substring(1).split("&");
+
+			for (let i = 0; i < pares.length; i++) {
+
+				let par = pares[i].split("=");
+
+				if (par.length > 1 && par[0] == "id") {
+					inputId.value = decodeURIComponent(par[1]);
+					break;
+				}
+
+			}
+
+		}
+
+		carregarIdDaQueryString();
+		carregarPessoa();
+
+	</script>
+
+</body>
+</html>

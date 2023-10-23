@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fetch - Listagem Simples</title>
+</head>
+<body>
+
+	<button type="button" onclick="listarPessoas()">
+		Listar Pessoas
+	</button>
+
+	<script type="text/javascript">
+
+		async function listarPessoas() {
+
+			let response = await fetch("https://academico.espm.br/testeapi/listar");
+
+			let lista = await response.json();
+
+			console.log("Pessoas cadastradas: " + lista.length);
+
+			for (let i = 0; i < lista.length; i++) {
+				console.log("Id: " + lista[i].id);
+				console.log("Nome: " + lista[i].nome);
+				console.log("E-mail: " + lista[i].email);
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>

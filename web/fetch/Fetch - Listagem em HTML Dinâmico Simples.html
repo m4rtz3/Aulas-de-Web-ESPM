@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fetch - Listagem em HTML Dinâmico Simples</title>
+</head>
+<body>
+
+	<button type="button" onclick="listarPessoas()">
+		Listar Pessoas
+	</button>
+
+	<div id="divListagem"></div>
+
+	<script type="text/javascript">
+
+		async function listarPessoas() {
+
+			let response = await fetch("https://academico.espm.br/testeapi/listar");
+
+			let lista = await response.json();
+
+			let html = `<h1>Pessoas cadastradas: ${lista.length}</h1>`;
+
+			for (let i = 0; i < lista.length; i++) {
+				html += `
+					<hr />
+					<h2>
+						<i>(${lista[i].id})</i> ${lista[i].nome}
+					</h2>
+					<p>
+						E-mail: ${lista[i].email}
+					</p>
+				`;
+			}
+
+			let divListagem = document.getElementById("divListagem");
+
+			divListagem.innerHTML = html;
+
+		}
+
+	</script>
+
+</body>
+</html>

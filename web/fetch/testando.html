@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Livros</title>
+</head>
+
+<body>
+
+	<div>
+		<label for="inputNomeL">Nome do livro</label>
+		<input type="text" id="inputNomeL" />
+	</div>
+
+	<div>
+		<label for="inputNomeA">Nome do Autor</label>
+		<input type="text" id="inputNomeA" />
+	</div>
+
+	<div>
+		<label for="inputNomeE">Nome da Editora</label>
+		<input type="text" id="inputNomeE" />
+	</div>
+
+	<div>
+		<label for="inputAno">Ano de publicação</label>
+		<input type="text" id="inputAno" />
+	</div>
+
+	<button type="button" onclick="criarLivro()">
+		Criar Livro
+	</button>
+
+	<script type="text/javascript">
+
+		async function criarLivro() {
+
+			let inputNomeL = document.getElementById("inputNomeL");
+			let inputNomeA = document.getElementById("inputNomeA");
+
+			let inputNomeE = document.getElementById("inputNomeE");
+			let inputAno = document.getElementById("inputAno");
+
+			let nomeLivro = inputNomeL.value;
+			let nomeAutor = inputNomeA.value;
+			let nomeEditora = inputNomeE.value;
+			let ano = inputAno.value;
+
+			if (!nomeLivro) {
+				alert("Nome do livro inválido!");
+				return;
+			}
+
+			if (!nomeAutor) {
+				alert("Nome do autor inválido!");
+				return;
+			}
+
+			if (!nomeEditora) {
+				alert("Nome da editora inválido!");
+				return;
+			}
+
+			if (!ano) {
+				alert("Ano inválido!");
+				return;
+			}
+
+			let livro = {
+				nome: nomeLivro,
+				autor: nomeAutor,
+				editora: nomeEditora,
+				ano: ano
+			};
+
+			try {
+
+				let response = await fetch("https://academico.espm.br/testeapi/livro/criar", {
+					method: "POST",
+					body: JSON.stringify(livro),
+					headers: {
+						"content-type": "application/json"
+					}
+				});
+
+				if (!response.ok) {
+					alert("Ocorreu um erro ao criar livro :(");
+					return;
+				}
+
+				inputNomeL.value = "";
+				inputNomeA.value = "";
+				inputNomeE.value = "";
+				inputAno.value = "";
+
+				alert("Livro criado com sucesso!");
+
+			} catch (ex) {
+				alert("Ocorreu um erro de rede ao criar livro: " + ex.message)
+			}
+
+		}
+
+	</script>
+
+</body>
+
+</html>

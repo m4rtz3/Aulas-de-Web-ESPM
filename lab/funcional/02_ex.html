@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 02</title>
+</head>
+
+<body>
+    <script>
+
+        let valores = []
+        let valor = 0
+
+        let numeros = parseInt(prompt("Quantidade de valores"))
+
+        for (let i = 0; i < numeros; i++) {
+            valor = parseInt(prompt("Digite um valor"))
+            valores.push(valor)
+        }
+
+        function eleminar(array) {
+            return array.filter((elemento, indice) => array.indexOf(elemento) === indice);
+        }
+
+        const elementosSolos = eleminar(valores)
+
+        console.log(valores)
+        console.log(elementosSolos)
+
+    </script>
+</body>
+
+</html>

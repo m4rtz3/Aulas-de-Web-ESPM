@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+</head>
+<body>
+    <script>
+        const carrinhoDeCompras = [
+            {produto: 'Notebook', preco: 2500, desconto: 0.1},
+            {produto: 'Smartphone', preco: 800, desconto: 0.05}, {produto: 'Fone de ouvido', preco: 100, desconto: 0},
+            {produto: 'Câmera', preco: 1200, desconto: 0.15}
+        ];
+
+        function calcularPrecoTotalComDesconto(carrinho) {
+            return carrinho.reduce((total, produto) => {
+                const precoComDesconto = produto.preco * (1 - produto.desconto);
+                return total + precoComDesconto;
+            }, 0);
+
+        }
+
+            const precoTotalComDesconto = calcularPrecoTotalComDesconto(carrinhoDeCompras);
+            console.log(precoTotalComDesconto.toFixed(2))
+            //4130.00
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+.centraliza {
+
+  text-align: center;
+}
+
+header {
+  text-align: center;
+  background: black;
+  color: white;
+  font-style: italic;
+  padding: 10px;
+  font-size: 30px;
+  }
+
+  .imagemBE{
+    padding-left: 20px;
+
+
+  }
+
+  
+.limitador {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+
+.imagem1 {
+  padding: 25px 0px 20px 50px;
+  padding-left: 100px;
+  width: 300px;
+}
+
+.imagem2 {
+    width: 200px;
+    text-align: right;
+    margin: auto 0;
+}
+
+
+
+.alinhar {
+  padding: 80px;
+  padding-left: 200px;
+}
+
+.alinhar2 {
+  padding: 70px;
+  padding-left: 150px;
+}
+
+
+
+.parteequipe {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.foto1 {
+  margin-top: 30px;
+ border-radius: 100px ;
+}

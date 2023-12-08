@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+
+<body>
+
+    <label for="precMin">Preço Mínimo: </label>
+    <input type="number" name="precMin" id="prcMinInput">
+    <p></p>
+
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" id="nomeInput">
+    <p></p>
+
+    <label for="preco">Preço: </label>
+    <input type="number" name="preco" id="precoInput">
+    <p></p>
+
+    <button id="clique">
+        Registro
+    </button>
+
+    <button id="filtrar">
+        Filtro
+    </button>
+
+    <script>
+
+        let botao = document.getElementById("clique");
+        botao.addEventListener("click", Registro);
+
+        let botaoF = document.getElementById("filtrar");
+        botaoF.addEventListener("click", Filtro);
+
+        let produtos = []
+
+        function Registro() {
+
+            campoNome = String(document.getElementById("nomeInput").value)
+            campoPreco = Number(document.getElementById("precoInput").value)
+
+            class Produto {
+                constructor(nome, preco) {
+                    this.nome = String(campoNome)
+                    this.preco = Number(campoPreco)
+                }
+            }
+
+            let a = new Produto();
+            produtos.push(a)
+
+            console.log(produtos)
+        }
+
+        function Filtro() {
+            let precMin = Number(document.getElementById("prcMinInput").value)
+            
+            let maiorPrec = []
+            let menorPrec = []
+
+            let aux = 0;
+
+            let indiceProduto = 0;
+
+            for (let i = 0; i < produtos.length; i++) {
+
+                if (produtos[i].preco >= precMin) {
+                    maiorPrec.push(produtos[i].preco)
+                } else {
+                    menorPrec.push(produtos[i].preco)
+                }
+
+            }
+
+            console.log("Os produtos com o preço acima ou igual ao preço mínimo são: " + maiorPrec)
+            console.log("Os produtos com o preço abaixo do preço mínimo são: " + menorPrec)
+        }
+    </script>
+</body>
+
+</html>

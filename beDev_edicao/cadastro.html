@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="cadastro">
+
+        <div class="containerCad">
+
+            <div class="limitador">
+                <div class="coluna1">
+                    <h1 class="titulo2">BeDev</h1>
+                    <p class="registro">Faça seu registro</p>
+                    <p class="pequeno">ou</p>
+
+                    <a href="https://github.com/login" class="linkLogin">
+                        <button class="botao2"><img class="github" src="./imagens/github-mark-white.svg"
+                                width="15px">Conecte-se com o
+                            Github
+                        </button>
+                    </a>
+
+                    <p class="texto1">Caso já possua conta, <a href="./login.html" class="clique">clique aqui</a> para
+                        logar</p>
+                </div>
+            </div>
+
+            <div class="limitador">
+                <div class="campos">
+
+                    <div class="caixoteCad1">
+                        <div class="caixa">
+                            <label class="labelCampo" for="nome">Nome</label>
+                            <input id="nomeUser" type="text" name="nome" autofocus required>
+                        </div>
+
+                        <div class="caixa">
+                            <label class="labelCampo" for="sobrenome">Sobrenome</label>
+                            <input id="sobrenomeUser" type="text" name="sobrenome" autofocus required>
+                        </div>
+                    </div>
+
+                    <div class="caixoteCad2">
+                        <label class="labelCampo" for="email">Email</label>
+                        <input id="emailUser" type="text" name="email" autofocus required>
+                    </div>
+
+                    <div class="caixoteCad2">
+                        <label class="labelCampo" for="senha">Senha</label>
+                        <div class="senhaEspaco">
+                            <input id="senhaUser" type="password" name="senha" autofocus required>
+                            <i class="fa-solid fa-eye" id="eye"></i>
+                        </div>
+                    </div>
+
+                    <div class="quadro">
+                        <p class="requisitos">X Possui 8 caracteres</p>
+                        <p class="requisitos">X Possui pelo menos 1 número</p>
+                        <p class="requisitos">X Possui pelo menos uma letra maiúscula</p>
+                    </div>
+
+                    <div class="botoesCad">
+                        <a href="" class="linkEntrarCad">
+                            <button class="botaoCad">Entrar</button>
+                        </a>
+
+                        <a href="" class="voltarCad">Voltar</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="preto2"></footer>
+    </div>
+
+    <script src="./js/jsBedev.js"></script>
+</body>
+
+</html>

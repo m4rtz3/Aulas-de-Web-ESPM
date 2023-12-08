@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estiloLogin.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="cadastro">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="titulo2">BeDev</h1>
+                    <p>Faça seu registro</p>
+                    <p class="pequeno">ou</p>
+
+                    <a href="https://github.com/login">
+                        <button class="botao2"><img class="img" src="./imagem/git.png" width="15px">Conecte-se com o
+                            Github
+                        </button>
+                    </a>
+
+                    <p class="ja">Caso já possua conta, <a href="login.html">clique aqui</a> para logar</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 caixa">
+                    <div class="lado">
+                        <label class="nm" for="nome">Nome</label>
+                        <input class="escrever" type="text" id="nome" name="nome">
+                    </div>
+
+                    <div class="lado">
+                        <label class="sobrenome" for="sobrenome">Sobrenome</label>
+                        <input class="escrever" type="text" id="sobrenome" name="sobrenome">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label class="seme" for="email">Email</label>
+                    <br>
+                    <input class="escrever" type="text" id="email" name="email">
+                </div>
+                <p></p>
+
+                <div class="col-sm-12">
+                    <label class="seme" for="senha">Senha</label>
+                    <br>
+                    <input class="escrever" type="password" id="senha" name="senha">
+                </div>
+            </div>
+
+            <div class="mar">
+                <p class="requisitos">X Possui 8 caracters</p>
+
+                <p class="requisitos">X Possui pelo menos 1 número</p>
+
+                <p class="requisitos">X Possui pelo menos uma letra maiuscula</p>
+            </div>
+
+            <div class="botaoLog">
+                <button class="botao1">Entrar</button>
+            </div>
+            <p></p>
+
+            <a href="">voltar</a>
+
+        </div>
+
+        <div class="black">
+
+        </div>
+
+    </div>
+</body>
+
+</html>

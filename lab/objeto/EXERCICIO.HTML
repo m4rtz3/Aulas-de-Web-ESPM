@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+
+<body>
+    <script>
+        let situacao = ["reprovado", "aprovado"]
+        let alunos = []
+
+        let qtdAlunos = Number(prompt("Quantos alunos são?"))
+
+        let nomeAluno = ""
+        let raAluno = ""
+
+        let nota1Aluno = 0
+        let nota2Aluno = 0
+
+        let media = 0
+        let situacaoFinal = ""
+
+        for (let i = 0; i < qtdAlunos; i++) {
+            nomeAluno = String(prompt("Qual o nome do aluno " + (1 + i) + "?"))
+            raAluno = String(prompt("Qual o RA do aluno " + (1 + i) + "?"))
+
+            nota1Aluno = Number(prompt("Qual a nota 1 do aluno " + (1 + i) + "?"))
+            nota2Aluno = Number(prompt("Qual a nota 2 do aluno " + (1 + i) + "?"))
+
+            media = (nota1Aluno + nota2Aluno) / 2
+
+            if (media >= 7) {
+                situacaoFinal = situacao[1]
+            } else {
+                situacaoFinal = situacao[0]
+            }
+
+            class Aluno {
+                constructor(nome, ra, nota1, nota2) {
+                    this.nome = String(nomeAluno)
+                    this.ra = String(raAluno)
+                    this.nota1 = Number(nota1Aluno)
+                    this.nota2 = Number(nota2Aluno)
+                    this.situacao = String(situacaoFinal)
+                }
+            }
+
+            let a = new Aluno();
+            alunos.push(a)
+        }
+
+        console.log(alunos)
+
+    </script>
+</body>
+
+</html>

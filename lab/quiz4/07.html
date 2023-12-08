@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+    <script>
+        const numeros = [1, 2, 3, 4, 5]
+        function calcularMedia(array) {
+            const soma = array.reduce((acc, num) => acc + num, 0);
+            return soma / array.length;
+        }
+
+        function calcularDesvioPadrao(array) {
+            const media = calcularMedia(array);
+
+            const diferencaQuadrado = array.map(num => Math.pow(num - media, 2));
+
+            const mediaQuadrados = calcularMedia(diferencaQuadrado);
+
+            const desvioPadrao = Math.sqrt(mediaQuadrados);
+            return desvioPadrao;
+        }
+
+        const desvioPadrao = calcularDesvioPadrao(numeros);
+        console.log(desvioPadrao.toFixed(2))
+        //1,41
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 02</title>
+</head>
+
+<body>
+    <script>
+
+        let alunos = []
+        let notas = []
+        let nm_Alunos = ""
+        let notasCdAluno = 0
+
+        let total = 0
+
+        let numeros = parseInt(prompt("Quantidade de alunos"))
+
+        for (let i = 0; i < numeros; i++) {
+            nm_Alunos = String(prompt(`Digite o nome do aluno ${i + 1}`))
+            alunos.push(nm_Alunos)
+
+            for (let j = 0; j < 4; j++) {
+                notasCdAluno = parseInt(prompt(`Digite a nota do aluno ${i + 1} na prova ${j + 1}`))
+                notas.push(notasCdAluno)
+            }
+
+            let total = notas.reduce(function (total, numero) {
+
+                return total 
+
+            }, 0);
+        }
+
+    </script>
+</body>
+
+</html>

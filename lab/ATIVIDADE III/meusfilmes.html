@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Filmes Favoritos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="overlay">
+
+            <div class="filmes">
+
+                <h1 class="titulo">Meus Filmes Favoritos</h1>
+
+                <form>
+                    <div class="secaoTtl">
+                        <label for="nomeFilmeCampo" class="nomeFilme">Título do Filme:</label>
+                        <input type="text" id="nomeFilmeCampo" name="titulo" autofocus required>
+                    </div>
+
+                    <div class="secaoGnr">
+                        <label for="gnrFilmeCampo" class="gnrFilme">Gênero do Filme:</label>
+                        <input type="text" id="gnrFilmeCampo" name="genero" autofocus required>
+                    </div>
+
+                    <input type="submit" value="Adicionar" class="submit">
+
+                </form>
+
+            </div>
+
+            <table id="tabela" class="oculta" border="1px">
+                <tr>
+                    <th>Título do Filme</th>
+                    <th class="gnr">Gênero</th>
+                    <th>Remover?</th>
+                </tr>
+                <tbody id="bodyTbl">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoas</title>
+</head>
+
+<body>
+
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" id="nomeInput">
+    <p></p>
+
+    <label for="preco">Idade: </label>
+    <input type="number" name="preco" id="idadeInput">
+    <p></p>
+
+    <button id="clique">
+        Registro
+    </button>
+
+    <button id="ordenar">
+        Ordenar
+    </button>
+
+    <script>
+        let botao = document.getElementById("clique");
+        botao.addEventListener("click", Registro);
+
+        let botaoC = document.getElementById("ordenar");
+        botaoC.addEventListener("click", Ordenar);
+
+        let pessoas = []
+
+        function Registro() {
+            let campoNome = String(document.getElementById("nomeInput").value)
+            let campoIdade = parseInt(document.getElementById("idadeInput").value)
+
+            class Pessoa {
+                constructor(nome, idade) {
+                    this.nome = String(campoNome)
+                    this.idade = parseInt(campoIdade)
+                }
+            }
+
+            let a = new Pessoa();
+            pessoas.push(a)
+
+            console.log(pessoas)
+        }
+
+
+        function Ordenar() {
+
+            console.log(pessoas.sort((a,b) => a.idade - b.idade))
+        }
+
+    </script>
+</body>
+
+</html>

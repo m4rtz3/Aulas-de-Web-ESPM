@@ -1,0 +1,18 @@
+.senhaEsc {
+    padding-left: 5px;
+    align-items: center;
+    align-self: center;
+}
+
+#senhaDgt {
+    margin: 5px;
+}
+
+.teclas > .row > input {
+    margin: 5px;
+    width: 35px;
+}
+
+#botaoValide {
+    width: 80px;
+}

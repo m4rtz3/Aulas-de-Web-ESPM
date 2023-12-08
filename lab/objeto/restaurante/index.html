@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="botoes">
+            <button id="reserva" onclick="Conteudo_Reserva()">Reservar mesa</button>
+            <button id="pesquisa" onclick="Conteudo_Pesquisa()">Pesquisar mesa</button>
+            <button id="imprimir_res">Imprimir reservas</button>
+            <button id="imprimir_lista">Imprimir lista de espera</button>
+            <button id="cancelar">Cancelar reserva</button>
+        </div>
+
+        <!-- reserva -->
+        <div id="conteudo_reserva">
+            <h2>Preencha as informações abaixo para a realização da reserva:</h2>
+
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nomeInput">
+
+            <label for="telefone">Número de telefone:</label>
+            <input type="number" name="telefone" id="telefoneInput">
+
+            <label for="frmPgmento">Forma de pagamento (à vista ou parcelado):</label>
+            <input type="text" name="frmPgmento" id="pgmentoInput">
+
+            <button id="registro_reserva">Registrar</button>
+        </div>
+
+        <!-- pesquisa -->
+        <div id="conteudo_pesquisa">
+            <h2>Informe seu telefone para sabermos se você tem reserva:</h2>
+
+            <label for="telefone">Número de telefone:</label>
+            <input type="number" name="telefone" id="telefoneInput">
+
+            <button id="pesquisar_reserva">Pesquisar</button>
+
+            <div id="aviso_pesquisa">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,650 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.divisoria {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    background-color: rgb(23, 22, 22);
+}
+
+#organizacao {
+    width: 90vw;
+    background-color: rgb(30, 27, 27);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.bannerHome {
+    background-image: url(../img/beach-near-hotel-min.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.container1,
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.titulo,
+.texto {
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.titulo {
+    text-transform: capitalize;
+    max-width: 28rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    overflow-y: hidden;
+}
+
+.tituloItalico {
+    font-style: italic;
+    font-family: cursive;
+}
+
+.texto {
+    max-width: 30rem;
+}
+
+.play {
+    width: 4rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.play:hover {
+    scale: 1.1;
+}
+
+.secaoSobreNos,
+.secaoQualidades {
+    margin: 0;
+    padding: 0 5rem;
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgb(30, 27, 27);
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.conteudoSobreNos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.sobreNOS {
+    color: #ff9900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    font-size: small;
+    text-align: left;
+}
+
+.txtSnos {
+    color: white;
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin: 0;
+    max-width: 24rem;
+}
+
+.mktItalico {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    background: -webkit-linear-gradient(#ff6f00, #ff8c21, #ffad33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.linhaSNos {
+    width: 2rem;
+}
+
+.secao {
+    margin: 2rem 0rem;
+    margin-bottom: 0rem;
+
+    max-width: 100%;
+}
+
+.breveTxt,
+.breveTxt2 {
+    color: white;
+    font-weight: lighter;
+    font-size: smaller;
+    width: 24rem;
+    max-width: 100%;
+}
+
+.breveTxt {
+    margin: 0;
+    max-width: 100%;
+}
+
+.conteudoSobreNos>.secao>h2,
+.conteudoSobreNos>.secao>h3 {
+    overflow-y: hidden;
+    max-width: 100%;
+}
+
+.conteudoSobreNos>.secao>h2 {
+    color: #ff8c21;
+}
+
+.conteudoSobreNos>.secao>h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.imagemSbN {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+
+    width: 50%;
+    padding: 1rem;
+}
+
+.sobreNosImagem {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* qualidades */
+
+.container2,
+.container3 {
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+
+    align-items: baseline;
+}
+
+.container2 {
+    margin: 1rem;
+}
+
+.QualidadeTxt,
+.ServicoText {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+    align-content: center;
+    align-items: center;
+}
+
+.QualidadeTxt>p {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.qldServ,
+.servServ {
+    opacity: 1;
+    color: #ff7b00;
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.imagemQualidade {
+    max-width: 26rem;
+    opacity: 0.25;
+    position: absolute;
+}
+
+.QldTtl,
+.ServTtl {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    margin: 0;
+}
+
+.QldTtl>.mktItalico,
+.ServTtl>.mktItalico {
+    font-size: 3rem;
+}
+
+.container2>button {
+    border-radius: 2rem;
+    background-color: #ff6f00;
+    color: white;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.container2>button:hover {
+    scale: 1.1;
+}
+
+.imagemGrad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+
+    width: 50%;
+    padding: 1rem;
+}
+
+.imgGr {
+    max-width: 100%;
+}
+
+.secaoServicos {
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    height: 100vh;
+
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+
+    align-self: center;
+    align-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.ServicoText {
+    justify-content: center;
+}
+
+.ServTtl {
+    text-align: center;
+}
+
+.container3>.breveTxt {
+    width: 30rem;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    color: black;
+    margin-top: 3.5rem;
+    width: 100%;
+    height: max-content;
+
+    margin: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    cursor: pointer;
+    width: 16rem;
+    height: 20rem;
+    margin: .25rem;
+    padding: 1rem;
+
+    text-align: center;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+
+
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.conteudoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.iconeCard {
+    width: 44px;
+}
+
+.conteudoCard>h4 {
+    color: #2f1400;
+    margin: .5rem;
+    font-size: 1.2rem;
+    overflow-y: hidden;
+}
+
+.conteudoCard>p {
+    width: 85%;
+    overflow-y: hidden;
+}
+
+.card:hover {
+    background-color: rgb(30, 27, 27);
+    color: white;
+    box-shadow: 0px 0px 0px 2px rgb(255, 153, 0)
+}
+
+.card:hover> .conteudoCard > h4 {
+    color: white;
+}
+
+.footer {
+    background-color: rgb(23, 22, 22);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cln1, .links, .suporte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cln1 {
+    width: 45%;
+}
+
+.cln1 > h4, .links > h5, .suporte > h5 {
+    padding: 3rem;
+    padding-bottom: 1rem;
+
+    color: white;
+    font-size: 2rem;
+}
+
+.cln1 > h4 > .mktItalico {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+.cln1 > p {
+    margin: 0;
+    padding: 3rem;
+    padding-top: 0;
+
+    color: white;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 1rem;
+
+    padding: 3rem;
+    padding-top: .75rem;
+}
+
+.ctt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    color: white;
+    width: max-content;
+    cursor: pointer;
+}
+
+.icnContato {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+}
+
+.ctt > p {
+    padding: 0;
+    margin: 0;
+
+    padding-left: .5rem;
+
+    width: 100%;
+}
+
+.links, .suporte {
+    color: white;
+
+    align-items: baseline;
+    align-self: baseline;
+    align-content: baseline;
+}
+
+.links > h5, .suporte > h5 {
+    padding: 3rem;
+    padding-bottom: 1.2rem;
+
+    font-size: 2rem;
+    background: -webkit-linear-gradient(#000000, #ff8c21);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: .75rem;
+    overflow-y: hidden;
+
+    width: max-content;
+}
+
+.opcoes > p, .opcoes > p {
+    padding-left: 3rem;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: .25rem;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.opcoes > p:hover, .opcoes > p:hover {
+    text-decoration: underline;
+    scale: 1.1
+}
+
+.rodape > .row {
+    margin: 0;
+}
+
+@media (max-width:890px) {
+    .divisoria {
+        display: block;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+
+        margin: 1rem 0;
+    }
+
+    .secaoSobreNos,
+    .secaoQualidades {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
+
+        width: 100%;
+        height: max-content;
+
+        align-items: center;
+        align-self: center;
+        align-content: center;
+
+        overflow-y: hidden;
+    }
+
+    .secaoQualidades {
+        margin: 2rem 0;
+    }
+
+    .conteudoSobreNos {
+        width: 100%;
+        height: max-content;
+    }
+
+    .container2 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .QldTtl, .ServTtl {
+        text-align: center;
+        width: 100%;
+        height: 15%;
+    }
+
+    .QualidadeTxt {
+        justify-content: center;
+    }
+
+    .ServTtl {
+        padding: 0;
+        padding-top: 1rem;
+        overflow-y: hidden;
+    }
+
+    .ServicoText {
+        justify-content: center;
+        padding-top: 4rem;
+        overflow-y: hidden;
+    }
+
+    .breveTxt {
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .cards {
+        flex-direction: column;
+        max-width: 70%;
+        margin-bottom: 2rem;
+    }
+
+    .card {
+        width: fit-content;
+        height: max-content;
+        flex-direction: row;
+        overflow-y: hidden;
+
+        max-width: 100%;
+    }
+
+    .rodape {
+        flex-direction: column;
+    }
+
+    .cln1, .links, .suporte {
+        width: 100%;
+    }
+
+    .contatos {
+        padding-bottom: 0;
+    }
+
+    .suporte {
+        margin-bottom: 3rem;
+    }
+
+}

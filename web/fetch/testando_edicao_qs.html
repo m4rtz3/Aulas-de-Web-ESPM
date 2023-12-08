@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edição</title>
+</head>
+<body>
+
+	<input type="hidden" id="inputId" />
+
+	<div>
+		<label for="inputNome">Nome</label>
+		<input type="text" id="inputNome" />
+	</div>
+
+	<div>
+		<label for="inputAutor">Autor</label>
+		<input type="text" id="inputAutor" />
+	</div>
+
+	<div>
+		<label for="inputEditora">Editora</label>
+		<input type="text" id="inputEditora" />
+	</div>
+
+	<div>
+		<label for="inputPub">Ano de Publicação</label>
+		<input type="text" id="inputPub" />
+	</div>
+
+	<button type="button" onclick="salvarLivro()">
+		Salvar Livro
+	</button>
+
+	<script type="text/javascript">
+
+		async function carregarLivro() {
+
+			let inputId = document.getElementById("inputId");
+			let inputNome = document.getElementById("inputNome");
+			let inputAutor = document.getElementById("inputAutor");
+			let inputEditora = document.getElementById("inputEditora");
+			let inputPub = document.getElementById("inputPub");
+
+			let id = parseInt(inputId.value);
+
+			if (!id) {
+				alert("Id inválido!");
+				return;
+			}
+
+			try {
+
+				let response = await fetch("https://academico.espm.br/testeapi/livros/obter/" + id);
+
+				if (!response.ok) {
+					alert("Ocorreu um erro ao carregar o livro, ou o livro não foi encontrado :(");
+					return;
+				}
+
+				let livro = await response.json();
+
+				inputNome.value = livro.nome;
+				inputAutor.value = livro.autor;
+				inputEditora.value = livro.editora;
+				inputPub.value = livro.ano;
+
+			} catch (ex) {
+				alert("Ocorreu um erro de rede ao salvar o livro: " + ex.message)
+			}
+
+		}
+
+		async function salvarLivro() {
+
+			let inputId = document.getElementById("inputId");
+			let inputNome = document.getElementById("inputNome");
+			let inputAutor = document.getElementById("inputAutor");
+			let inputEditora = document.getElementById("inputEditora");
+			let inputPub = document.getElementById("inputPub");
+
+			let id = parseInt(inputId.value);
+			let nome = inputNome.value;
+			let autor = inputAutor.value;
+			let editora = inputEditora.value;
+			let ano = inputPub.value;
+
+			if (!id) {
+				alert("Id inválido!");
+				return;
+			}
+
+			if (!nome) {
+				alert("Nome inválido!");
+				return;
+			}
+
+			if (!autor) {
+				alert("Autor inválido!");
+				return;
+			}
+
+			if (!editora) {
+				alert("Editora inválido!");
+				return;
+			}
+
+			if (!ano) {
+				alert("Ano inválido!");
+				return;
+			}
+
+			let livro = {
+				nome: nomeLivro,
+				autor: nomeAutor,
+				editora: nomeEditora,
+				ano: ano
+			};
+
+			try {
+
+				let response = await fetch("https://academico.espm.br/testeapi/livros/alterar", {
+					method: "POST",
+					body: JSON.stringify(livro),
+					headers: {
+						"content-type": "application/json"
+					}
+				});
+
+				if (!response.ok) {
+					alert("Ocorreu um erro ao salvar o livro, ou o livro não foi encontrado :(");
+					return;
+				}
+
+				alert("Livro salvo com sucesso!");
+
+			} catch (ex) {
+				alert("Ocorreu um erro de rede ao salvar o livro: " + ex.message)
+			}
+
+		}
+
+		function carregarIdDaQueryString() {
+
+			let inputId = document.getElementById("inputId");
+
+			let pares = location.search.substring(1).split("&");
+
+			for (let i = 0; i < pares.length; i++) {
+
+				let par = pares[i].split("=");
+
+				if (par.length > 1 && par[0] == "id") {
+					inputId.value = decodeURIComponent(par[1]);
+					break;
+				}
+
+			}
+
+		}
+
+		carregarIdDaQueryString();
+		carregarLivro();
+
+	</script>
+
+</body>
+</html>

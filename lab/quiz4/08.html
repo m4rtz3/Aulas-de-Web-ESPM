@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    <script>
+        let x = "";
+        const fn2 = (v,i,a) => {
+            if(i%2 == 0) {
+                x += v;
+            }
+        }
+
+        function fn1(a) {
+            a.forEach(fn2)
+            return x;
+        }
+
+        alert(fn1[2,3,5,7,11,13]);
+    //undefined
+    </script>
+</body>
+</html>

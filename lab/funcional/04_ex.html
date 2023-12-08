@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 02</title>
+</head>
+
+<body>
+    <script>
+
+        let numeros = parseInt(prompt("Quantidade de valores"))
+        let listaTempCel = []
+        let celsius = 0
+
+        for (let i = 0; i < numeros; i++) {
+            celsius = parseInt(prompt("Digite um valor"))
+            listaTempCel.push(celsius)
+        }
+
+        const tempFah = listaTempCel.map(function (temp) {
+            return (1.8 * temp) + 32
+        })
+        
+        console.log(`As temperaturas em Celsius: ${listaTempCel}`)
+        console.log(`As temperaturas em Fahrenheit: ${tempFah}`)
+
+    </script>
+</body>
+
+</html>

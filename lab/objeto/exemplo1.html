@@ -1,0 +1,21 @@
+<script>
+    
+    class Aluno {
+        constructor(nome, ra, nota1, nota2) {
+            this.nome = "Humbertinho"
+            this.ra = "123"
+            this.nota1 = 9
+            this.nota2 = 3
+        }
+        
+        calcularMedia(nota1, nota2) {
+            return ((this.nota1 + this.nota2)/2)
+        }
+    }
+
+    let a = new Aluno();
+
+    console.log(a)
+    console.log(a.calcularMedia())
+
+</script>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 01 - TAD</title>
+</head>
+
+<body>
+    <label for="codigo">Código: </label>
+    <input type="number" name="codigo" id="codigoInput">
+    <p></p>
+
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" id="nomeInput">
+    <p></p>
+
+    <label for="preco">Preço: </label>
+    <input type="number" name="preco" id="precoInput">
+    <p></p>
+
+    <label>Baixa na semana: </label>
+    <table id="tabela" border="5px">
+        <thead>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="campo1">
+                    <input type="number" name="campoBaixa" id="campoBaixa1">
+                </td>
+                <td id="campo2">
+                    <input type="number" name="campoBaixa" id="campoBaixa2">
+                </td>
+                <td id="campo3">
+                    <input type="number" name="campoBaixa" id="campoBaixa3">
+                </td>
+                <td id="campo4">
+                    <input type="number" name="campoBaixa" id="campoBaixa4">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p></p>
+
+    <button id="clique">
+        Registre
+    </button>
+
+    <button id="comparar">
+        Comparar
+    </button>
+
+    <script>
+        let botao = document.getElementById("clique");
+        botao.addEventListener("click", Registro);
+
+        let comparar = document.getElementById("comparar");
+        comparar.addEventListener("click", Maior);
+
+        let campoCodigo = 0;
+        let campoNome = "";
+        let campoPreco = 0;
+        let campoBaixa = 0;
+
+        let baixas = []
+        let produtos = []
+
+        function Registro() {
+            campoCodigo = parseInt(document.getElementById("codigoInput").value)
+            campoNome = (String(document.getElementById("nomeInput").value)).toUpperCase();
+            campoPreco = Number(document.getElementById("precoInput").value)
+
+            for (let i = 0; i < 4; i++) {
+                let nm = i + 1;
+                let nmBaixa = parseInt(document.getElementById("campoBaixa" + nm).value)
+                baixas.push(nmBaixa)
+            }
+
+            class Produto {
+                constructor(codigo, nome, preco, baixa1, baixa2, baixa3, baixa4) {
+                    this.codigo = Number(campoCodigo)
+                    this.nome = String(campoNome)
+                    this.preco = Number(campoPreco)
+                    this.baixas = baixas
+                }
+            }
+
+            let a = new Produto();
+            produtos.push(a)
+            baixas = []
+
+        }
+        console.log(produtos)
+
+        function Maior() {
+            let maior
+                = 0;
+            let aux = 0;
+
+            let indiceProduto = 0;
+
+            for (let i = 0; i
+                < produtos.length; i++) {
+                aux = 0;
+                for (let j = 0; j
+                    < 4; j++) {
+                    aux += produtos[i].baixas[j]
+                }
+
+                if (aux > maior) {
+                    maior = aux
+                    indiceProduto = produtos[i]
+                }
+
+            }
+
+            console.log(maior, indiceProduto)
+        }
+    </script>
+</body>
+
+</html>

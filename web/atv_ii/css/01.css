@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+#campoVlrA,
+#campoVlrB,
+#campoVlrC,
+#campoVlrc,
+#campoVlrD,
+#campoVlrE {
+    width: 225px;
+    height: 25px;
+}
+
+#botao {
+    width: 200px;
+}
